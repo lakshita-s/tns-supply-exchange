@@ -1,0 +1,164 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "redaction-35", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #eeeeee;
+}
+
+header {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-style: italic;
+
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebar-filters {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ccc;
+  font-weight: 700;
+}
+
+.sidebar-filters button {
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.listings {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.listing-card {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+#map {
+  flex: 1;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay.open {
+  display: flex;
+}
+
+.panel {
+  background: #eeeeee;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.panel h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-style: italic;
+
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.radio-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.auth-note {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+#landing {
+  position: fixed;
+  inset: 0;
+  background: #eeeeee;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#landing.hidden {
+  display: none;
+}
+
+#landing-logo {
+  font-weight: 700;
+  font-style: italic;
+}
